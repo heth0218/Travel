@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fetch e</title>
+  </head>
+  <body>
+      <script>
+       data()
+       async function data(){
+        const response=await fetch('/api1');
+        const json=await response.json()
+        console.log(json)
+        for (item of json){
+          const mood=document.createElement('div')
+          mood.textContent=`Name:${item.name}`
+          const geo=document.createElement('div')
+          geo.textContent=`Latitude:${item.latitude},Longitude:${item.longitude}`
+          document.body.append(mood,geo)
+
+        }
+       }
+       //  const data={lat,lon,lol}
+        //  const option={
+        //      method:"POST",
+        //      headers:{
+        //          'Content-Type':'application/json'
+        //      },
+        //      body:JSON.stringify(data)
+        //  };
+        //  const res=await fetch('/api',option);
+        //  const data1=await res.json();
+        //  console.log(data1)
+
+        //  fetch('/api',option).then(res=>{
+        //     const data1=res.json()
+           
+        //  }).then(res=>{
+        //      console.log(res)
+        //  })
+       
+        </script>
+    
+</body>
+</html>
